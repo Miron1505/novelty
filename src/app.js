@@ -12,8 +12,6 @@ const productRoutes = require('./routes/product.routes');
 // Variables de entorno
 require('dotenv').config();
 
-console.log(process.env.DB_NAME);
-
 // Inicialización de express
 const app = express();
 
