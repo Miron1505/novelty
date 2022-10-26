@@ -11,7 +11,7 @@ function main() {
     app.listen(port, async () => {
         console.log(`Server listening on port ${port}`);
         try {
-            await connection.sync({force: true}) // Se trata de conectar a la bd, [force: true] elimina y vuelve a crear las tablas
+            await connection.sync({force: false}) // Se trata de conectar a la bd, [force: true] elimina y vuelve a crear las tablas
             await createRoles(); // Se crean los roles en la BD si no existen.
             await createCategories(); // Se crean las categorias en la BD si no existen.
             await createClassifications(); // Se crean las clasificaciones en la BD si no existen.
